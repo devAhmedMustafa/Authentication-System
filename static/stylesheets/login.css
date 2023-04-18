@@ -1,26 +1,39 @@
-.log-box{position: absolute;
-    top: 0;
-    right: 0;
-    width: 42%;
-    height: 100%;}
-.log-box .form-box{
+body{
+    background-color: #f7f7f7; /*Lignt Mode*/
+    background-color: rgb(36, 36, 36); /*Dark Mode*/
+}
+
+*{
+    padding: 0; /*first*/
+    margin: 0;
+}
+
+.container{ /* alter of body */
+
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height:100% ;
+
+}
+.container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid navajowhite;
     background: transparent;
-    backdrop-filter: blur(20px);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
+    padding: 30px;
     color:#e4e4e4;
 
 }
-.form-box h1{
+form h1{
     font-size: 35px;
     text-align: center;
 }
-.form-box .in-box{
+form .in-box{
     width: 340px;
     height: 50px;
     border-bottom: 2px solid whitesmoke;
@@ -40,18 +53,11 @@
 }
 .in-box label{
     position: absolute;
-    top: 50%;
-    left:0;
-    transform: translateY(-50%);
     font-size: 16px;
     font-weight: 500;
     pointer-events: none;
-    transition: .5s ease;
 
 }
-.in-box input:focus~label,
-.in-box input:valid~label{
-top:-5px;}
 .in-box .icon{
     position: absolute;
     top: 13px;
@@ -59,7 +65,7 @@ top:-5px;}
     font-size: 19px;
 
 }
-.form-box .remember{
+form .remember{
     font-size: 15px;
     font-weight: 500;
     margin: -15px 0 15px;
@@ -95,7 +101,4 @@ top:-5px;}
     margin-top: 80px;
     margin-right:80px;
 }
-body{
-    background-color: rgb(10, 81, 12);
-    background-image: url(WallpaperDog-10878102.jpg);
-}
+

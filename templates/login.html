@@ -6,31 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>the login</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="main.css" rel="stylesheet">
+    <link href="../static/stylesheets/login.css" rel="stylesheet">
 </head>
 <body>
-<div class ="log-box">
-    <div class="form-box">
-        <form action="#">
-            <h1>login</h1>
-            <div class="in-box">
-                <span class="icon"><i class='bx bxs-envelope'></i></span>
-                <input type="email"needed>
-                <label>Email</label>
+<div class ="container">
+    <form action="#">
+        <h1>login</h1>
+        <div class="in-box">
+            <label>Email</label>
+            <span class="icon"><i class='bx bxs-envelope'></i></span>
+            <input type="email"needed>
+            
+        </div>
+        <div class="in-box">
+            <label>password</label> 
+            <span class="icon"><i class='bx bxs-lock'></i></span>
+            <input type="password"needed>
+            
+        </div>
+            <div class="remember">
+                <a href="#">forgot my password</a>
+                <button type="submit" class="btn">log in</button>
             </div>
-            <div class="in-box">
-                <span class="icon"><i class='bx bxs-lock'></i></span>
-                <input type="password"needed>
-                <label>password</label> 
-                </div>
-                <div class="remember">
-                    <label><input type="checkbox">
-                    remember me</label>
-                    <a href="#">forgot my password</a>
-                    <button type="submit" class="btn">log in</button>
-                </div>
-        </form>
-    </div>
+    </form>
 </div>
 </body> 
 </html>
