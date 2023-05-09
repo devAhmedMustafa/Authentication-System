@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,24 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>the login</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="../static/stylesheets/login.css" rel="stylesheet">
+    <link href="{%  static 'stylesheets/form.css' %}" rel="stylesheet">
 </head>
 <body>
 <div class ="container">
-    <form action="#">
+    <form action="#" method='post'>
+        {% csrf_token %}
         <h1>login</h1>
+
         <div class="in-box">
-            <label>Email</label>
+            <label>Username</label>
             <span class="icon"><i class='bx bxs-envelope'></i></span>
-            <input type="email"needed>
+            <input type="username"needed name='username'>
             
         </div>
         <div class="in-box">
             <label>password</label> 
             <span class="icon"><i class='bx bxs-lock'></i></span>
-            <input type="password"needed>
+            <input type="password"needed name='password'>
             
         </div>
+        {{error}}
             <div class="remember">
                 <a href="#">forgot my password</a>
                 <button type="submit" class="btn">log in</button>
