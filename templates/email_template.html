@@ -1,3 +1,5 @@
-Hey
+{% autoescape off %}
+Hey {{ user.first_name }} {{ user.last_name }}
 
-Just a test
+To activate your account http:{{ domain }}{% url 'activate' pk=user.pk token=token %}
+{% endautoescape %}

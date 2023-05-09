@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    'rest_framework','rest_framework.authtoken',
     'knox',
     'accounts',
 ]
@@ -102,12 +102,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 #EMAIL SETUP
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'am1804067@gmail.com'
-# EMAIL_HOST_PASSWORD = '17394628555'
-# EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'am1804067@gmail.com'
+EMAIL_HOST_PASSWORD = 'oqxguyewqqicrbsl'
+EMAIL_USE_TLS = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

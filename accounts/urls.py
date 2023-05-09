@@ -1,13 +1,11 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
-from rest_framework.routers import DefaultRouter
 
-router = DefaultRouter()
-router.register('users', views.UserList)
 
 urlpatterns = [
-    path('api/users', include(router.urls)),
+    path('api/users/', views.UserList.as_view()),
     path('register/', views.sign_up, name='register'),
     path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
+    path('activate/<pk>/<token>/', views.activate, name='activate'),
 ]

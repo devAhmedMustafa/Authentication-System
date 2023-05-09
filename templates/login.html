@@ -12,26 +12,28 @@
 </head>
 <body>
 <div class ="container">
-    <form action="#" method='post'>
+    <form method='POST'>
         {% csrf_token %}
         <h1>login</h1>
 
         <div class="in-box">
             <label>Username</label>
             <span class="icon"><i class='bx bxs-envelope'></i></span>
-            <input type="username"needed name='username'>
+            <input type="email" required name='email'>
             
         </div>
         <div class="in-box">
             <label>password</label> 
             <span class="icon"><i class='bx bxs-lock'></i></span>
-            <input type="password"needed name='password'>
+            <input type="password" required name='password'>
             
         </div>
+
+        <input type="submit" class="btn">
         {{error}}
             <div class="remember">
                 <a href="#">forgot my password</a>
-                <button type="submit" class="btn">log in</button>
+
             </div>
     </form>
 </div>
